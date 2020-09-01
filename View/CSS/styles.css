@@ -1,0 +1,81 @@
+body {
+  background-color: #212121;
+  color: #c3b8b1;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  height: 150px;
+  padding-top: 35px;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+}
+
+.logo-unicaes {
+  width: 50px;
+  height: 50px;
+  -webkit-filter: grayscale(95%) brightness(120%) contrast(90%);
+  opacity: 0.9;
+}
+
+.navbar-brand {
+  color: grey;
+}
+.headerFont {
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.imagenBanner {
+  background-image: url(/View/IMG/mathdept-banner.jpg);
+  opacity: 0.85;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.texto {
+  font-size: 25px;
+  color: black;
+}
+
+.fa-chart-pie {
+  color: grey;
+}
+
+.hoverItemOne:hover .hoverItemTwo {
+  color: white;
+}
+
+.inicioFilaUno {
+}
+
+.imageInicioUno {
+  width: 350px;
+  height: 280px;
+}
+
+.InicioColumnaDos {
+  margin-right: 50px;
+  background-color: rgb(23, 27, 23);
+}
+
+.centerBoton {
+  margin: auto;
+  width: 25%;
+  padding: 10px;
+}
+
+.centerGraph {
+  margin: auto;
+  width: 55%;
+  padding: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+  }
+  

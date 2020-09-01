@@ -1,0 +1,70 @@
+<div class="container graph">
+  <script src="https://unpkg.com/mathjs@7.2.0/dist/math.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <form class="col-12" id="form">
+        <div class="col-12 col-sm-12 col-md-8 col-log-8 col-xl-8 my-2 center">
+          <label for="exampleInputEmail1">Ingrese la función</label>
+          <input
+            class="form-control bg-dark text-white"
+            type="text"
+            placeholder="Ej : 4 * sin(x) + 5 * cos(x/2)"
+            id="eq"
+            value="2 * sin(x) - x"
+          />
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-8 col-log-8 col-xl-8 my-2 center">
+          <button
+            type="submit"
+            value="Draw"
+            class="btn btn-dark border-white centerBoton my-3"
+            id="calcular"
+          >
+            Verificar
+          </button>
+        </div>
+
+      <div class="col-12" id="plot"></div>
+    </div>
+  </div>
+  <!--Agradecimientos
+  Used plot library: https://plot.ly/javascript/i-->
+
+  <script>
+    function draw() {
+      try {
+        // compile the expression once
+        const expression = document.getElementById("eq").value;
+        const expr = math.compile(expression);
+
+        // evaluate the expression repeatedly for different values of x
+        const xValues = math.range(-10, 10, 0.5).toArray();
+        const yValues = xValues.map(function (x) {
+          return expr.evaluate({ x: x });
+        });
+
+        // render the plot using plotly
+        const trace1 = {
+          x: xValues,
+          y: yValues,
+          type: "scatter",
+        };
+        const data = [trace1];
+        Plotly.newPlot("plot", data);
+      } catch (err) {
+        console.error(err);
+        alert(err);
+      }
+    }
+
+    document.getElementById("form").onsubmit = function (event) {
+      event.preventDefault();
+      draw();
+    };
+
+    draw();
+  </script>
+</div>
