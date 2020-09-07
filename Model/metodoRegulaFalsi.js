@@ -141,5 +141,5 @@ function getRegulafalsi() {
     //contando iteraciones
     i += 1;
     console.log("iteracion : " + i);
-  } while (parseFloat(Ea) > 0.001 || i < 150);
+  } while (parseFloat(Ea) > 0.001 || i > 150);
 }

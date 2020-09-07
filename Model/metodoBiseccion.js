@@ -125,5 +125,5 @@ function getMetodoBiseccion() {
     //contando iteraciones
     i += 1;
     console.log("iteracion : " + i);
-  } while (parseFloat(Ea) > 0.001);
+  } while (parseFloat(Ea) > 0.001 || i > 150);
 }
