@@ -40,12 +40,11 @@
     <!-- Aquí se mandan a llavar los otros archivos HTML -->
     <script>
       $(document).ready(function () {
-        $("header").loadHTML("./View/HTML/Elementos/header.html");
-        $("nav").loadHTML("./View/HTML/Elementos/nav.html");
+        $("header").loadHTML("/View/HTML/Elementos/header.html");
+        $("nav").loadHTML("/View/HTML/Elementos/nav.html");
         $("div .biseccionFormulario").loadHTML(
-          "./View/HTML/Metodos/Cerrados/biseccionFormulario.html"
-        );
-        $("div .graph").loadHTML("./View/HTML/Elementos/graphDraw.html");
+          "/View/HTML/Metodos/Cerrados/biseccionFormulario.html");
+        $("div .graph").loadHTML("/View/HTML/Elementos/graphDraw.html");
       });
     </script>
   </body>
