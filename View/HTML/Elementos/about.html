@@ -7,45 +7,34 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
       rel="stylesheet"
     />
-    <!-- Agradecimientos especiales a boostrap y fontawesome, 
+    <!--Agradecimientos especiales a boostrap y fontawesome, 
         licencia en /View/CSS/LICENSE.txt -->
-    <script src="https://unpkg.com/mathjs@7.2.0/dist/math.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
     <link rel="stylesheet" href="/Metodos-Numericos-en-la-Computacion/View/CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="/Metodos-Numericos-en-la-Computacion/View/CSS/styles.css" />
     <link rel="stylesheet" href="/Metodos-Numericos-en-la-Computacion/View/CSS/all.min.css" />
     <link rel="stylesheet" href="/Metodos-Numericos-en-la-Computacion/View/CSS/fontawesome.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Métodos Númericos en la Computación</title>
   </head>
   <body>
-    <!-- formulario de biseccion -->
     <div class="container-fluid">
       <header></header>
       <nav></nav>
-      <h1 class="center">Método de la bisección</h1>
-      <div class="graph"></div>
-      <div class="secanteFormulario"></div>
-      <div class="container">
-        <table class="table table-dark" id="buildTable"></table>
-      </div>
+      <div class="Inicio"></div>
+      <div class="Cardview"></div>
     </div>
     <!-- JQuery es maravilo -->
     <script src="/Metodos-Numericos-en-la-Computacion/Controller/JS/jquery-3.5.1.min.js"></script>
     <script src="/Metodos-Numericos-en-la-Computacion/Controller/JS/jquery.includeHTML.min.js"></script>
-    <script src="/Metodos-Numericos-en-la-Computacion/Model/metodoSecante.js"></script>
-    <!-- <script src="/Model/graphDraw.js"></script> -->
-    <!-- Aquí se mandan a llavar los otros archivos HTML -->
+    <!-- Aquí se mandan a llavar los otros archivos HTML-->
     <script>
       $(document).ready(function () {
         $("header").loadHTML("/Metodos-Numericos-en-la-Computacion/View/HTML/Elementos/header.html");
         $("nav").loadHTML("/Metodos-Numericos-en-la-Computacion/View/HTML/Elementos/nav.html");
-        $("div .secanteFormulario").loadHTML(
-          "/Metodos-Numericos-en-la-Computacion/View/HTML/Metodos/Abiertos/Secante/secanteFormulario.html"
-        );
-        $("div .graph").loadHTML("/Metodos-Numericos-en-la-Computacion/View/HTML/Elementos/graphDraw.html");
+        $("div .Inicio").loadHTML("/Metodos-Numericos-en-la-Computacion/View/HTML/Inicio/Inicio.html");
+        $("div .Cardview").loadHTML("/Metodos-Numericos-en-la-Computacion/View/HTML/Elementos/cardviewsabout.html");
       });
     </script>
   </body>
